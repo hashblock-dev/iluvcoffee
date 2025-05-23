@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+    db:
+        container_name: iluvcoffee_db
+        environment:
+            POSTGRES_USER: admin
+            POSTGRES_PASSWORD: pass123
+            POSTGRES_DB: iluvcoffee_db
+        image: postgres:latest
+        ports:
+            - "5432:5432"
+        restart: always
