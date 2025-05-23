@@ -41,9 +41,6 @@ importers:
       typeorm:
         specifier: ^0.3.24
         version: 0.3.24(pg@8.16.0)(reflect-metadata@0.2.2)(ts-node@10.9.2(@swc/core@1.11.24)(@types/node@22.15.18)(typescript@5.8.3))
-      zod:
-        specifier: ^3.25.23
-        version: 3.25.23
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3.2.0
