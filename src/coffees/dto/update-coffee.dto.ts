@@ -1,4 +1,10 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateCoffeeDto } from './create-coffee.dto';
+import { z } from 'zod';
 
-export class UpdateCoffeeDto extends PartialType(CreateCoffeeDto) {}
+const UpdateCoffeeDtoSchema = z.object({
+  id: z.number().optional(),
+  name: z.string().optional(),
+  brand: z.string().optional(),
+  flavors: z.array(z.string().optional()),
+});
+
+export type UpdateCoffeeDto = z.infer<typeof UpdateCoffeeDtoSchema>;
